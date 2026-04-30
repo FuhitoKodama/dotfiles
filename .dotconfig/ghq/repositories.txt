@@ -1,0 +1,8 @@
+# ghq で一括 clone したいリポジトリ一覧
+# - 1 行 1 件、形式は `<host>/<owner>/<repo>` (例: github.com/junegunn/fzf)
+# - 先頭 `#` はコメント、空行は無視
+# - `make ghq-clone` で ghq get -u を順次実行し、既存は update のみ
+#
+# 例:
+# github.com/junegunn/fzf
+# github.com/x-motemen/ghq

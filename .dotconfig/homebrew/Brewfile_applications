@@ -1,0 +1,23 @@
+cask_args appdir: "/Applications"
+
+# Browser
+cask "google-chrome"
+
+# Documentation
+cask "notion"
+
+# Commutication
+cask "slack"
+cask "zoom"
+
+# Dictionary
+cask "deepl"
+
+# Utils
+cask "1password"
+cask "clipy"
+cask "rectangle"
+cask "notunes"
+
+# Terminal
+cask "ghostty"

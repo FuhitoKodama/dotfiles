@@ -1,0 +1,18 @@
+# AWS CLI
+# export AWS_PROFILE=default
+# export AWS_REGION=ap-northeast-1
+
+# Terraform Cloud / HCP Terraform (for CLI: terraform, hcp)
+# export TF_CLOUD_TOKEN="tfapi-XXXXXXXXXXXXXXXXXXXX"
+# export TF_CLOUD_HOSTNAME="app.terraform.io"
+
+# New Relic CLI (optional: when not using newrelic profiles)
+# export NEW_RELIC_API_KEY="NRAK-XXXXXXXXXXXXXXXXXXXX"
+# export NEW_RELIC_ACCOUNT_ID="1234567"
+# export NEW_RELIC_REGION="us"
+
+# Optional: corporate proxy
+# export http_proxy="YOUR_PROXY"
+# export https_proxy="YOUR_PROXY"
+# export HTTP_PROXY="$http_proxy"
+# export HTTPS_PROXY="$https_proxy"

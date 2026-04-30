@@ -1,0 +1,21 @@
+{
+    "servers": {
+        "aws-knowledge-mcp-server": {
+            "command": "uvx",
+            "args": [
+                "fastmcp",
+                "run",
+                "https://knowledge-mcp.global.api.aws"
+            ]
+        },
+        "terraform": {
+            "command": "docker",
+            "args": [
+                "run",
+                "-i",
+                "--rm",
+                "hashicorp/terraform-mcp-server"
+            ]
+        }
+    }
+}

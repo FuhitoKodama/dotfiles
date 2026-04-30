@@ -1,0 +1,46 @@
+# Baseline extensions that are broadly useful across languages and projects.
+# One extension ID per line. Blank lines and comments are ignored.
+
+# GitHub
+github.vscode-pull-request-github
+github.vscode-github-actions
+github.codespaces
+github.copilot-chat
+ms-vscode-remote.remote-containers
+
+# Python
+ms-python.black-formatter
+charliermarsh.ruff
+ms-python.python
+ms-python.vscode-pylance
+ms-python.debugpy
+ms-python.vscode-python-envs
+
+# Terraform
+hashicorp.terraform
+
+# Markdown
+yzhang.markdown-all-in-one
+shd101wyy.markdown-preview-enhanced
+
+# Editor utilities
+streetsidesoftware.code-spell-checker
+usernamehw.errorlens
+gruntfuggly.todo-tree
+aaron-bond.better-comments
+christian-kohler.path-intellisense
+esbenp.prettier-vscode
+shardulm94.trailing-spaces
+oderwat.indent-rainbow
+sirtori.indenticator
+wayou.vscode-todo-highlight
+mosapride.zenkaku
+alefragnani.project-manager
+janisdd.vscode-edit-csv
+
+# Appearance
+pkief.material-icon-theme
+github.github-vscode-theme
+
+# Diagram
+hediet.vscode-drawio

@@ -1,0 +1,6 @@
+cask_args appdir: "/Applications"
+
+# Editors
+cask "visual-studio-code"
+cask "dbeaver-community"
+cask "postman"

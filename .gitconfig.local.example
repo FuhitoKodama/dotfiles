@@ -1,0 +1,10 @@
+; このファイルは GIT_CONFIG_GLOBAL (~/.zshenv で設定) により git の global config として扱われる
+; 共通設定は dotfiles 管理下の ~/.gitconfig を include する
+; gh auth setup-git / VS Code / `git config --global` の書き込みはすべてこのファイルに入る
+[include]
+	path = ~/.gitconfig
+[user]
+	name = YOUR_NAME
+	email = YOUR_EMAIL
+[credential]
+	helper = osxkeychain

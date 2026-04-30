@@ -1,0 +1,59 @@
+cask_args appdir: "/Applications"
+
+tap "hashicorp/tap"
+
+# Utility
+brew "jq"
+brew "fzf"
+brew "nmap"
+brew "tree"
+brew "bat"
+brew "uv"
+brew "tmux"
+
+# AWS
+brew "awscli"
+
+# New Relic
+brew "newrelic-cli"
+
+# Git
+brew "git"
+brew "gh"
+brew "ghq"
+brew "git-secrets"
+brew "gibo"
+
+# Docker
+# NOTE: In commercial use, you mustn't use docker desktop without payment.
+#
+# If you want to make docker environment without docker desktop,
+# use 'brew docker' instead of  'cask docker'.
+# brew "docker"
+if OS.mac?
+    cask "docker"
+end
+
+# xxenv
+brew "tfenv"
+brew "pipenv"
+brew "pyenv"
+
+# terraform
+brew "tflint"
+brew "hashicorp/tap/hcp"
+
+# Java
+# cask "corretto11"
+# brew "maven"
+# brew "gradle"
+
+# Go
+brew "go"
+
+# Vim
+brew "neovim"
+
+# Font
+# tap "delphinus/sfmono-square"
+# brew "sfmono-square"

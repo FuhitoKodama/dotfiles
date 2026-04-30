@@ -1,0 +1,120 @@
+# ------------------------------------------------------------------------
+# All ignore
+# ------------------------------------------------------------------------
+/**
+/.**
+
+# ------------------------------------------------------------------------
+# /
+# ------------------------------------------------------------------------
+!/.zshenv
+!/.zprofile
+!/.zshrc
+!/.zlocal.example
+!/.gitconfig
+!/.gitconfig.local.example
+!/.gitignore
+!/Makefile
+!/install.sh
+!/README.md
+!/Keybind.md
+!/TODO.md
+!/docs
+!/docs/**
+
+# ------------------------------------------------------------------------
+# /.git-templates
+# ------------------------------------------------------------------------
+!/.git-templates
+!/.git-templates/git-secrets
+!/.git-templates/git-secrets/hooks
+!/.git-templates/git-secrets/hooks/pre-push
+
+# ------------------------------------------------------------------------
+# /.devcontainer
+# ------------------------------------------------------------------------
+!/.devcontainer
+!/.devcontainer/devcontainer.json
+!/.devcontainer/Dockerfile
+
+# ------------------------------------------------------------------------
+# /.dotconfig
+# ------------------------------------------------------------------------
+!/.dotconfig
+
+!/.dotconfig/bat
+!/.dotconfig/bat/bat.conf
+
+!/.dotconfig/ghq
+!/.dotconfig/ghq/repositories.txt
+
+!/.dotconfig/homebrew
+!/.dotconfig/homebrew/Brewfile_applications
+!/.dotconfig/homebrew/Brewfile_dev_cli
+!/.dotconfig/homebrew/Brewfile_dev_gui
+!/.dotconfig/homebrew/Brewfile_homebrew
+
+!/.dotconfig/vscode
+!/.dotconfig/vscode/settings.json
+!/.dotconfig/vscode/keybindings.json
+!/.dotconfig/vscode/extensions.txt
+!/.dotconfig/vscode/mcp.json
+
+!/.dotconfig/idea
+!/.dotconfig/idea/macOS_Donngi.xml
+
+!/.dotconfig/iterm2
+!/.dotconfig/iterm2/com.googlecode.iterm2.plist
+
+!/.dotconfig/nvim
+!/.dotconfig/nvim/lua
+!/.dotconfig/nvim/lua/base.lua
+!/.dotconfig/nvim/lua/keymaps.lua
+!/.dotconfig/nvim/lua/plugins.lua
+!/.dotconfig/nvim/lua/plugin_nvim_tree.lua
+!/.dotconfig/nvim/lua/plugin_nvim_vscode.lua
+!/.dotconfig/nvim/lua/plugin_telescope.lua
+!/.dotconfig/nvim/init.lua
+
+!/.dotconfig/tmux
+!/.dotconfig/tmux/tmux.conf
+
+!/.dotconfig/zsh
+!/.dotconfig/zsh/profile
+!/.dotconfig/zsh/rc
+!/.dotconfig/zsh/rc/alias.zsh
+!/.dotconfig/zsh/rc/appearance.zsh
+!/.dotconfig/zsh/rc/bindkey.zsh
+!/.dotconfig/zsh/rc/completion.zsh
+!/.dotconfig/zsh/rc/history.zsh
+!/.dotconfig/zsh/rc/plugin.zsh
+!/.dotconfig/zsh/rc/wordstyle.zsh
+!/.dotconfig/zsh/rc/setopt.zsh
+!/.dotconfig/zsh/rc/xxenv.zsh
+
+# ------------------------------------------------------------------------
+# /setup
+# ------------------------------------------------------------------------
+!/setup
+
+!/setup/deploy
+!/setup/deploy/deploy_home.sh
+!/setup/deploy/deploy_vscode.sh
+!/setup/deploy/deploy_idea.sh
+!/setup/deploy/deploy_nvim.sh
+!/setup/deploy/util_deploy.sh
+
+!/setup/doctor.sh
+
+!/setup/manual
+!/setup/manual/init_git_identity.sh
+!/setup/manual/init_ghq_clone.sh
+
+!/setup/init
+!/setup/init/init_custom_pure.sh
+!/setup/init/init_ghq.sh
+!/setup/init/init_homebrew.sh
+!/setup/init/init_macOS.sh
+!/setup/init/init_node.sh
+!/setup/init/init_vscode_extensions.sh
+!/setup/init/init_vim_plugins.sh
