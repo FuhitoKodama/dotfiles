@@ -46,12 +46,8 @@ then
         exit 1
     fi
 
-    # deploy完了までの間にhomebrewのpathを通すため、一時的に.zprofileにpathを書き込む(deploy phaseで上書きされる)
-    echo "Write homebrew path to .zprofile"
-    touch "$HOME/.zprofile"
-    if ! grep -Fqx "$brew_shellenv_cmd" "$HOME/.zprofile"; then
-        echo "$brew_shellenv_cmd" >> "$HOME/.zprofile"
-    fi
+    # .zprofile は既に macOS arm64 / Linuxbrew 双方の brew shellenv を分岐実行するため追記不要。
+    # 本スクリプト内で brew コマンドを使うために現在シェルにだけ eval する。
     eval "$brew_shellenv_cmd"
     echo ""
 else
