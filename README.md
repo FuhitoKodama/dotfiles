@@ -72,6 +72,7 @@ MCP は「対話的な調査・検討・構築で、CLI 単体より価値があ
 
 - **MCP 方針と採用対象**: [docs/mcp.md](docs/mcp.md)
 - **CLI 認証設定ガイド**: [docs/cli-setup.md](docs/cli-setup.md)
+- **Claude Code マルチエージェント運用**: [docs/claude-code-multi-agent.md](docs/claude-code-multi-agent.md)
 
 **初期段階での採用予定:**
 - AWS Knowledge MCP（ドキュメント、API リファレンス、ベストプラクティス参照）
