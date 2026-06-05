@@ -15,8 +15,16 @@ export GIT_CONFIG_GLOBAL="$HOME/.gitconfig.local"
 
 # ghq
 # `--global` を付けると include 経由の値を拾えないためスコープ指定を外す（system + global + 現在地 repo を順に探索）
+# Coder: /workspaces 配下以外はコンテナ停止時に破棄されるため ghq の実体を /workspaces/ghq に逃がす
+# （明示的な GHQ_ROOT が優先、未設定時のみ Coder のデフォルトを適用）
 if command -v ghq >/dev/null 2>&1; then
-	ghq_root="${GHQ_ROOT:-$(git config --get ghq.root 2>/dev/null || true)}"
+	ghq_root="${GHQ_ROOT:-}"
+	if [ -z "$ghq_root" ] && [ "${CODER:-}" = "true" ]; then
+		ghq_root="/workspaces/ghq"
+	fi
+	if [ -z "$ghq_root" ]; then
+		ghq_root="$(git config --get ghq.root 2>/dev/null || true)"
+	fi
 	if [ -n "$ghq_root" ]; then
 		ghq_root="${ghq_root/#\~/$HOME}"
 		mkdir -p "$ghq_root"

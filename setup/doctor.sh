@@ -189,6 +189,13 @@ check_file "~/.gitconfig.local" "$HOME/.gitconfig.local" "Run: make deploy-home 
 check_git_config "user.name" "Run: gh auth login && make init-git-identity (writes to ~/.gitconfig.local)"
 check_git_config "user.email" "Run: gh auth login && make init-git-identity (writes to ~/.gitconfig.local)"
 check_git_config "ghq.root" "Defined in ~/.gitconfig (included by ~/.gitconfig.local)"
+# Coder では /workspaces 配下以外がコンテナ停止時に破棄されるため、.zshenv が GHQ_ROOT を /workspaces/ghq に上書きする。
+# git config の値（~/ghq）と実効値が乖離するので、最終的に使われる GHQ_ROOT も併せて表示する。
+if [ -n "${GHQ_ROOT:-}" ]; then
+    printf "${GREEN}✓${NC} GHQ_ROOT (effective): ${GHQ_ROOT}\n"
+elif [ "${CODER:-}" = "true" ]; then
+    printf "${YELLOW}~${NC} GHQ_ROOT: unset (Coder default /workspaces/ghq will apply on next shell)\n"
+fi
 echo ""
 
 # Dotfiles deployment

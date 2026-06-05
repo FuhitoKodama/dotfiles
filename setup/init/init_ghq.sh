@@ -8,6 +8,11 @@ echo "# ------------------------------------"
 echo ""
 
 ghq_root="${GHQ_ROOT:-}"
+# Coder: /workspaces 配下以外はコンテナ停止時に破棄されるため ghq の実体を /workspaces/ghq に逃がす
+# （明示的な GHQ_ROOT が優先、未設定時のみ Coder のデフォルトを適用）
+if [ -z "$ghq_root" ] && [ "${CODER:-}" = "true" ]; then
+    ghq_root="/workspaces/ghq"
+fi
 if [ -z "$ghq_root" ]; then
     ghq_root="$(git config --global --get ghq.root 2>/dev/null || true)"
 fi
