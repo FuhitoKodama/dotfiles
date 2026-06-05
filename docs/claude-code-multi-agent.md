@@ -12,13 +12,11 @@
 ## 全体像
 
 ```
-┌──────────────────────────────────────────────────────────┐
-│ orchestrator: claude agents ビュー（人間が触る唯一のUI）  │
-│   └─ ビューから worker をバックグラウンド dispatch          │
-│        ├─ worker1  worktree: repo-worker1   branch worker1 │
-│        ├─ worker2  worktree: repo-worker2   branch worker2 │
-│        └─ worker3  worktree: repo-worker3   branch worker3 │
-└──────────────────────────────────────────────────────────┘
+orchestrator: claude agents ビュー（人間が触る唯一のUI）
+  └─ ビューから worker をバックグラウンド dispatch
+       ├─ worker1  worktree: repo-worker1   branch worker1
+       ├─ worker2  worktree: repo-worker2   branch worker2
+       └─ worker3  worktree: repo-worker3   branch worker3
 ```
 
 - `claude -w <name>` が新規ブランチ付きの worktree を切るので、ワーカー同士のファイル競合は基本起きない
