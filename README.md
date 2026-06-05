@@ -179,7 +179,7 @@ make doctor
 
 ### 5. 常用リポジトリの一括取得 (任意)
 
-`.dotconfig/ghq/repositories.txt` に `<host>/<owner>/<repo>` 形式で常用リポジトリを列挙しておくと、次のコマンドで `~/ghq` 配下に一括取得できる（既存は `ghq get -u` で update のみ）。
+`.dotconfig/ghq/repositories.txt` に `<host>/<owner>/<repo>` 形式で常用リポジトリを列挙しておくと、次のコマンドで `~/ghq` 配下に一括取得できる（既存は `ghq get -u` で update のみ）。Coder workspace では `/workspaces` 配下以外がコンテナ停止時に破棄されるため、`.zshenv` が `CODER=true` を検出して `GHQ_ROOT` を `/workspaces/ghq` に上書きする（明示的に `GHQ_ROOT` を設定済みならそれを尊重）。
 
 ```sh
 make ghq-clone
