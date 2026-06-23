@@ -44,6 +44,7 @@ ghq-clone:
 remote-setup-github-auth:
 	gh auth status -h github.com
 	gh auth setup-git
+	bash ./setup/manual/init_git_identity.sh
 
 remote-ignore-local-diff:
 	git update-index --skip-worktree .dotconfig/vscode/settings.json
