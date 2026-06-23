@@ -8,13 +8,18 @@ echo "# ------------------------------------"
 echo ""
 
 ghq_root="${GHQ_ROOT:-}"
+git_global_target="${GIT_CONFIG_GLOBAL:-$HOME/.gitconfig}"
 # Coder: /workspaces 配下以外はコンテナ停止時に破棄されるため ghq の実体を /workspaces/ghq に逃がす
 # （明示的な GHQ_ROOT が優先、未設定時のみ Coder のデフォルトを適用）
 if [ -z "$ghq_root" ] && [ "${CODER:-}" = "true" ]; then
     ghq_root="/workspaces/ghq"
+
+    # Persist root so subsequent non-login shells also resolve ghq under /workspaces.
+    git config --file "$git_global_target" ghq.root "$ghq_root"
 fi
 if [ -z "$ghq_root" ]; then
-    ghq_root="$(git config --global --get ghq.root 2>/dev/null || true)"
+    # Do not use --global; include chains (e.g. ~/.gitconfig.local -> ~/.gitconfig) must be respected.
+    ghq_root="$(git config --get ghq.root 2>/dev/null || true)"
 fi
 
 if [ -z "$ghq_root" ]; then
