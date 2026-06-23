@@ -41,7 +41,7 @@ brew "pipenv"
 brew "pyenv"
 
 # terraform
-brew "terraform-linters/tap/tflint"
+cask "terraform-linters/tap/tflint"
 brew "hashicorp/tap/hcp"
 
 # Java

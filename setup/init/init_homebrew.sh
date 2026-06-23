@@ -60,6 +60,12 @@ if ! command -v brew >/dev/null 2>&1; then
     exit 1
 fi
 
+# Homebrew 6+ may require explicit trust for third-party taps in non-interactive runs.
+brew tap hashicorp/tap
+brew tap terraform-linters/tap
+brew trust hashicorp/tap
+brew trust terraform-linters/tap
+
 echo "Start brew bundle ..."
 brew bundle --file "$HOME/.dotconfig/homebrew/Brewfile_homebrew"
 brew bundle --file "$HOME/.dotconfig/homebrew/Brewfile_dev_cli"
