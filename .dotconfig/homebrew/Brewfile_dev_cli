@@ -1,6 +1,7 @@
 cask_args appdir: "/Applications"
 
 tap "hashicorp/tap"
+tap "terraform-linters/tap"
 
 # Utility
 brew "jq"
@@ -40,7 +41,7 @@ brew "pipenv"
 brew "pyenv"
 
 # terraform
-brew "tflint"
+brew "terraform-linters/tap/tflint"
 brew "hashicorp/tap/hcp"
 
 # Java
